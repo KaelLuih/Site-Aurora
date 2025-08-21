@@ -5,22 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Café Aurora</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
 
-    <header id="header">
-        <div class="container header-inner">
-            <div id="logo">
+    <header>
+        <div class="w-9/10 max-w-[1200px] pt-[10px] mr-auto ml-[auto] flex justify-between">
+            <div class="text-amber-800 text-[1.2rem] Poppins ">
                 <h1>Café Aurora </h1>
             </div>
-            <nav class="menu" aria-label="Menu Principal">
+            <nav aria-label="Menu Principal">
 
-                <div id="menu-mobile" aria-label="Menu-mobile">
+                <div class="bg-white border-0  text-[2rem] font-bold md:hidden   " aria-label="Menu-mobile">
                     <button>☰</button>
                 </div>
-                <ul class="menu-desktop" aria-label="Menu menu-desktop">
+                <ul class="hidden  md:flex justify-end items-center gap-4 text-black-800 "
+                    aria-label="Menu menu-desktop">
                     <li><a href="#">Inicios</a></li>
                     <li><a href="#">Cardápio</a></li>
                     <li><a href="#">Contato</a></li>
@@ -30,42 +31,52 @@
     </header>
 
     <main>
-        <section id="hero">
-            <div class="hero-overlay">
-                <div class="container hero-content ">
-                    <h2>Sinta o sabor do verdadeiro Café</h2>
-                    <p>Uma experiencia unica de sabores intesos e aromas envolventes, preparados com grãos selecionados
-                        e
-                        muito carinho </p>
-                    <a href="#products" class="btn">Conheça Nosso Cardápio</a>
-                </div>
+        <section>
+
+
+            <div  class="  bg-[url(/images/aurora-capa.jpg)]  h-192 bg-top bg-size-[177vh]  flex justify-center p-8 text-white items-center">
+
+
+                    <div class="bg-gradient-to-b from    w-[100%] h-192  flex flex-col  justify-center items-center text-center   ">
+                        <h2 class="text-[2.5rem] text-white mb-4">Sinta o sabor do verdadeiro Café</h2>
+                        <p class="text-[1.1rem] mb-8">Uma experiencia unica de sabores intesos e aromas envolventes,
+                            preparados com grãos
+                            selecionados
+                            e
+                            muito carinho </p>
+                        <a href="#products" class="bg-amber-800 px-[1.8rem] py-[1rem] rounded-[1rem] font-bold">Conheça
+                            Nosso Cardápio</a>
+                    </div>
+       
             </div>
 
         </section>
-        <section id="products">
-            <div class="container">
-                <h2>Nossos Cafés Especiais</h2>
-                <p class="descricao">Descubra nossa seleção de cafés premium, cuidadosamente preparados para oferecer
+        <section class="pt-[5rem] pr-0    ">
+            <div class="w-9/10 max-w-[1200px] pt-[10px] mr-auto ml-[auto]">
+                <h2 class="items-center text-[1.8rem] mb-[0.5rem] font-bold font-[Poppins]  ">Nossos Cafés Especiais
+                </h2>
+                <p class="items-center mt-0 mr-[auto] mb-[3rem] ">Descubra nossa seleção de cafés premium,
+                    cuidadosamente preparados para oferecer
                     uma experiência sensorial inesquecivel.</p>
-                <div class="grid">
+                <div class=" grid-cols-1fr gap-[2rem]    grid ">
 
-                    <div class="card">
+                    <div class="rounded-[0.8rem]  shadow-md bg-orange-100         card">
                         <img src="./images/espresso.jpg" alt="Café Espresso">
-                        <div class="cards-body">
-                            <h3>Espresso Clássico</h3>
-                            <p>Inteso e encorpado, com crema perfeita de chocolate amargo.</p>
-                            <span class="price">R$ 8,90</span>
+                        <div class="p-8">
+                            <h3 class="font-[1.2rem] font-bold mb-[0.5rem]">Espresso Clássico</h3>
+                            <p class="text-[1.1rem] mb-8">Inteso e encorpado, com crema perfeita de chocolate amargo.</p>
+                            <span class=" text-amber-800   mb-[1rem]">R$ 8,90</span>
                         </div>
 
 
 
                     </div>
 
-                    <div class="card">
+                    <div class="rounded-[0.8rem]  shadow-md bg-orange-100    ">
                         <img src="./images/capuccino.jpg" alt="Café Espresso">
-                        <div class="cards-body">
-                            <h3>Cappuccino Cremoso</h3>
-                            <p>Equilibrado e suave, com espuma aveludada e canela polvilhada</p>
+                        <div class="p-8">
+                            <h3 class="font-[1.2rem] font-bold mb-[0.5rem]" >Cappuccino Cremoso</h3>
+                            <p  class="text-[1.1rem] mb-8" >Equilibrado e suave, com espuma aveludada e canela polvilhada</p>
                             <span class="price">R$ 12,50</span>
                         </div>
 
@@ -74,11 +85,11 @@
                     </div>
 
 
-                    <div class="card">
+                    <div class="rounded-[0.8rem]  shadow-md bg-orange-100 ">
                         <img src="./images/cafe-gelado.jpg" alt="Café Espresso">
-                        <div class="cards-body">
-                            <h3>Café Gelado</h3>
-                            <p>Refrescante e aromatico com toques de baunilha e caldo de caramelo</p>
+                        <div class="p-8">
+                            <h3 class="font-[1.2rem] font-bold mb-[0.5rem]">Café Gelado</h3>
+                            <p  class="text-[1.1rem] mb-8">Refrescante e aromatico com toques de baunilha e caldo de caramelo</p>
                             <span class="price">R$ 10,50</span>
                         </div>
 
@@ -86,11 +97,11 @@
 
                     </div>
 
-                    <div class="card">
+                    <div class="rounded-[0.8rem]  shadow-md bg-orange-100 ">
                         <img src="./images/cafe-coado-especial.jpg" alt="Café Espresso">
-                        <div class="cards-body">
-                            <h3>Café coado Especial</h3>
-                            <p>Metodo tradicional que realça notas frutadas a acidez equilibrada.</p>
+                        <div class="p-8">
+                            <h3 class="font-[1.2rem] font-bold mb-[0.5rem]" >Café coado Especial</h3>
+                            <p  class="text-[1.1rem] mb-8">Metodo tradicional que realça notas frutadas a acidez equilibrada.</p>
                             <span class="price">R$ 10,50</span>
                         </div>
 
@@ -104,7 +115,7 @@
 
                 </div>
         </section>
-        <section id="contact">
+        <section class="bg-orange-100 p-[4rem] mt-[4rem]">
             <div class="container contact-box">
                 <div class="contact-text">
                     <h2>Horário de Funcionamento</h2>
